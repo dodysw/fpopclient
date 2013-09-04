@@ -93,7 +93,6 @@ class FreedomPop:
 
     def printMyInfo(self):
         usage = self.getUsage()
-        used = usage["balanceRemaining"] / usage["planLimitUsed"]
         inMB = 1024 * 1024
         endTime = datetime.datetime.fromtimestamp(usage["endTime"] / 1000) 
         delta = endTime - datetime.datetime.now()
@@ -103,8 +102,19 @@ class FreedomPop:
 def run(username, password):
     fp = FreedomPop(username, password)
     fp.printMyInfo()
-    pprint(fp.getInfo())
-    #import pdb; pdb.set_trace()
+    """
+    Full list of methods:
+    fp.getUsage()       # get the data usage, begin/end quota period, quota MB bonuses.
+    fp.getPlan()        # get current plan
+    fp.getPlans()       # list of available plans
+    fp.getService()     # get current subscribed service
+    fp.getServices()    # list of available services
+    fp.getInfo()        # get the account's first/last name, last login time, email address
+    fp.getFriends()     # list of people friended this account
+    fp.Contacts()       # I'm not sure what this for
+    # there are some other API that can update/write to your account that I reluctant to expose it here...
+    
+    """
 
 if __name__ == "__main__":
     import sys
