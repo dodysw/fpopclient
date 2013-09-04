@@ -1,0 +1,4 @@
+fpopclient
+==========
+
+FreedomPop API client
