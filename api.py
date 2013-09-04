@@ -96,7 +96,7 @@ class FreedomPop:
         inMB = 1024 * 1024
         endTime = datetime.datetime.fromtimestamp(usage["endTime"] / 1000) 
         delta = endTime - datetime.datetime.now()
-        print "Data used: %0.2f%% (%0.2f MB of %0.2f MB) Time until quota reset: %d days %d hours (%s)" % (usage["percentUsed"], usage["planLimitUsed"] / inMB, usage["totalLimit"] / inMB, delta.days, delta.seconds / 3600, endTime )
+        print "Data used: %0.2f%% (%0.2f MB of %0.2f MB) Time until quota reset: %d days %d hours (%s)" % (usage["percentUsed"] * 100, usage["planLimitUsed"] / inMB, usage["totalLimit"] / inMB, delta.days, delta.seconds / 3600, endTime )
 
 
 def run(username, password):

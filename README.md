@@ -8,7 +8,7 @@ Sample command line to illustrate usage can be executed; Allowing freedompop cus
 ## Usage
 ```
 $ python api.py yourfreedompop@email.com thepassword
-Data used: 0.19% (204.00 MB of 1100.00 MB) Time until quota reset: 23 days 19 hours (2013-09-27 20:00:00)
+Data used: 19% (204.00 MB of 1100.00 MB) Time until quota reset: 23 days 19 hours (2013-09-27 20:00:00)
 ```
 
 ## License
